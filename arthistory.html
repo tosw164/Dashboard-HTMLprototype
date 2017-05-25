@@ -32,20 +32,63 @@
             <div class="row">
                 <div class="col-xs-12">
 
-                    <ul id="tabbing-controls">
-                        <li class="btn tab-controls active">In Progress</li>
-                        <li class="btn tab-controls">Completed</li>
-                        <li class="btn tab-controls">Past</li>
+                    <h1>This be about some art history</h1>
 
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                        <a data-toggle="tab" href="#arthistory_inprogress"> In Progress</a></li>
+                        <li><a data-toggle="tab" href="#arthistory_completed">Completed</a></li>
+                        <li><a data-toggle="tab" href="#arthistory_peerreview">Peer Reviews</a></li>
+                    </ul>
+
+                    <div class="tab-content" >
+                        <div class="tab-pane fade in active" id="arthistory_inprogress">
+                            <h1>Table goes here inprogress</h1>
+                            
+                        </div>
+
+                        <div class="tab-pane fade" id="arthistory_completed">
+                            <h1>Table goes here compelte</h1>
+                            
+                        </div>
+
+                        <div class="tab-pane fade" id="arthistory_peerreview" >
+                            <h1>Table goes here review</h1>
+                            
+                        </div>
                         
 
-                    </ul>
+                    </div>
                     
 
                 </div>
                 
 
             </div>
+
+            <div id="exTab2" class="container"> 
+<ul class="nav nav-tabs">
+            <li class="active">
+        <a  href="#1" data-toggle="tab">Overview</a>
+            </li>
+            <li><a href="#2" data-toggle="tab">Without clearfix</a>
+            </li>
+            <li><a href="#3" data-toggle="tab">Solution</a>
+            </li>
+        </ul>
+
+            <div class="tab-content ">
+              <div class="tab-pane active" id="1">
+          <h3>Standard tab panel created on bootstrap using nav-tabs</h3>
+                </div>
+                <div class="tab-pane" id="2">
+          <h3>Notice the gap between the content and tab after applying a background color</h3>
+                </div>
+        <div class="tab-pane" id="3">
+          <h3>add clearfix to tab-content (see the css)</h3>
+                </div>
+            </div>
+  </div>
         </div>
 
 
