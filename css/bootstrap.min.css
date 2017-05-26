@@ -94,10 +94,14 @@ object {
 	background: #EEE;
 }
 
+.assignment-tables {
+	margin-top: 5%;
+}
+
 
 h1{
 	font-family: "Times New Roman";
 	font-size: 3em;
 	font-weight: bold;
-	font-variant: small-caps;
+	/*font-variant: small-caps;*/
 }
