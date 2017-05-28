@@ -19,13 +19,21 @@
  	height: 100%; width: 100%;
  }
 
-/*Topbar*/
+ h1{
+	font-family: "Arial";
+	font-size: 3em;
+	font-weight: bold;
+}
+
+
+
+ /*Topbar*/
  .topbar {
  	position: fixed;
  	left: 0; right: 0;
  	padding-left: 2%; padding-right: 0px;
  	height: 10%; width: 100%;
- 	background: #e3d9c6;
+ 	background: #aeb5b7;
  }
 
  .topbar > .row >  {
@@ -37,11 +45,25 @@
  .col-xs-6 {
  	padding-left: 0px;
  	padding-right: 0px;
+ 	padding-top: 5px;
+ 	padding-bottom: 5px;
  	height: 100%;
  }
 
+
  .icon_img {
+ 	width: 15%;
  	max-height: 100%;
+ 	padding-top: 1%; padding-bottom: 1%;
+ 	background: #f28140;
+ 	border: 1px solid #f28140;
+ 	border-top-right-radius: 20px;
+ 	border-top-left-radius: 20px;
+ 	border-bottom-right-radius: 20px;
+ 	border-bottom-left-radius: 20px;
+ }
+ .icon_img:hover{
+ 	opacity: 0.5;
  }
 
  .topbar > .row-icon {
@@ -62,15 +84,15 @@
  }
 
  .topbar-text {
-
+ 	color: #000;
  }
 
-
+/*Sidebar*/
  .sidebar {
  	position: fixed;
  	left: 0; top: 10%; bottom: 0;
  	width: 8%; height: 90%;
- 	background: #575d5e;
+ 	background: #bbc1c3;
  }
 
  .sidebar > img {
@@ -83,24 +105,24 @@
  }
 
  .sidebar > img:hover {
- 	opacity: 0.5;
+ 	background: #f39158;
  }
 
+/*main content frame*/
  .main_content_frame {
  	position: fixed;
  	top: 10%; left: 8%;
  	height: 90%; width: 92%;
- 	background:
-
+ 	background: #eee8dd;
  }
-
 
  .main_content {
  	position: fixed;
  	width: 100%; height: 100%;
- 	background: #EEE;
+ 	background: #eee8dd;
  }
 
+/*art.html related CSS*/
  .assignment-tables {
  	margin-top: 5%;
  	width: 80%;
@@ -108,12 +130,62 @@
  }
 
  .tab-top {
- 	font-size: 2em;
+ 	font: "Arial";
+ 	font-weight: bold;
+ 	font-size: 1.5em;
+ }
+
+ .nav-tabs > li > a:hover {
+ 	color: #ed6b21;
+ 	background: #000;
+ }
+
+ .nav-tabs > li.active > a{
+	color: #f08242;
+ 	background: #595959;
+ }
+
+ .nav-tabs > li.active > a:hover {
+ 	color: #f08242;
+ 	background: #595959;
+ }
+
+  .nav-tabs > li.active > a:focus {
+ 	color: #f08242;
+ 	background: #595959;
+ }
+
+  .nav-tabs > li > a:hover {
+ 	color: #f08242;
+ 	background: #595959;
+ }
+
+ .nav > li > a {
+ 	color: #000;
  }
 
  .back-button-container{
  	padding-bottom: 10px;
  }
+
+ .table-hover > tbody > tr {
+ 	background: #e5ddcc;
+ }
+
+ .table-hover >tbody > tr:hover {
+ 	background: #f2f2f2;
+ }
+
+ .table-hover > tbody > tr > th > a {
+ 	color: #bf4e0d;
+ }
+
+ .table > tbody > tr > th {
+ 	font-size: 0.8em;
+ }
+
+
+/*Modals*/
 
  /*modal text contents*/
  .modal-text > p{
@@ -128,9 +200,7 @@
  .case-question-image > img {
  	height: 100%;
  	width: 100%;
-/*	flex-grow: 1;
-*//*	padding: 2%;
-*/}
+ }
 
 .main_content > .container {
 	max-height: 100%;
@@ -139,8 +209,7 @@
 
 .questions-column {
 	height: 90%; 
-	/*position: absolute;*/
-	overflow-y: scroll;
+\	overflow-y: scroll;
 }
 
 .questions-form {
@@ -171,56 +240,53 @@
 	margin-left: auto; margin-right: auto;
 }
 
-h1{
-	font-family: "Times New Roman";
-	font-size: 3em;
-	font-weight: bold;
-	/*font-variant: small-caps;*/
-}
+
 
 /* The snackbar - position it at the bottom and in the middle of the screen */
 #save_toast {
-    visibility: hidden; /* Hidden by default. Visible on click */
-    min-width: 250px; /* Set a default minimum width */
-    margin-left: -125px; /* Divide value of min-width by 2 */
-    background-color: #333; /* Black background color */
-    color: #fff; /* White text color */
-    text-align: center; /* Centered text */
-    border-radius: 2px; /* Rounded borders */
-    padding: 16px; /* Padding */
-    position: fixed; /* Sit on top of the screen */
-    z-index: 1; /* Add a z-index if needed */
-    left: 50%; /* Center the snackbar */
-    bottom: 50%; /* 30px from the bottom */
+	visibility: hidden; /* Hidden by default. Visible on click */
+	min-width: 250px; /* Set a default minimum width */
+	margin-left: -125px; /* Divide value of min-width by 2 */
+	background-color: #333; /* Black background color */
+	color: #fff; /* White text color */
+	text-align: center; /* Centered text */
+	border-radius: 2px; /* Rounded borders */
+	padding: 16px; /* Padding */
+	position: fixed; /* Sit on top of the screen */
+	z-index: 1; /* Add a z-index if needed */
+	left: 50%; /* Center the snackbar */
+	bottom: 50%; /* 30px from the bottom */
 }
+
+/*CSS related to toast example from W3schools*/
 
 /* Show the snackbar when clicking on a button (class added with JavaScript) */
 #save_toast.show {
-    visibility: visible; /* Show the snackbar */
+	visibility: visible; /* Show the snackbar */
 
 /* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
 However, delay the fade out process for 2.5 seconds */
-    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
 /* Animations to fade the snackbar in and out */
 @-webkit-keyframes fadein {
-    from {bottom: 50%; opacity: 0;} 
-    to {bottom: 50%; opacity: 1;}
+	from {bottom: 50%; opacity: 0;} 
+	to {bottom: 50%; opacity: 1;}
 }
 
 @keyframes fadein {
-    from {bottom: 50%; opacity: 0;}
-    to {bottom: 50%; opacity: 1;}
+	from {bottom: 50%; opacity: 0;}
+	to {bottom: 50%; opacity: 1;}
 }
 
 @-webkit-keyframes fadeout {
-    from {bottom: 50%; opacity: 1;} 
-    to {bottom: 50%; opacity: 0;}
+	from {bottom: 50%; opacity: 1;} 
+	to {bottom: 50%; opacity: 0;}
 }
 
 @keyframes fadeout {
-    from {bottom: 50%; opacity: 1;}
-    to {bottom: 50%; opacity: 0;}
+	from {bottom: 50%; opacity: 1;}
+	to {bottom: 50%; opacity: 0;}
 }
