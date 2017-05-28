@@ -84,7 +84,6 @@ object {
 	height: 90%; width: 85%;
     background: #EEE;
 
-    overflow-y: scroll;
 }
 
 
@@ -100,6 +99,10 @@ object {
 
 .tab-top {
 	font-size: 2em;
+}
+
+.back-button-container{
+	padding-bottom: 30px;
 }
 
 
