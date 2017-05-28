@@ -135,6 +135,12 @@ object {
 	height: 100%;
 }
 
+.save-submit-group {
+	height: 100%;
+	padding: 5px;
+	float: right;
+}
+
 h1{
 	font-family: "Times New Roman";
 	font-size: 3em;
