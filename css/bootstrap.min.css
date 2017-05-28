@@ -62,16 +62,17 @@
  .sidebar {
  	position: fixed;
  	left: 0; top: 10%; bottom: 0;
- 	width: 15%; height: 90%;
+ 	width: 8%; height: 90%;
  	background: #575d5e;
  }
 
  .sidebar > img {
- 	height: 15%; width: auto;
+ 	max-height: 100%; width: auto;
  	padding-top: 10px;
  	padding-bottom: 10px;
  	padding-left: 10px;
  	padding-right: 10px;
+ 	margin: auto;
  }
 
  .sidebar > img:hover {
@@ -80,8 +81,8 @@
 
  .main_content_frame {
  	position: fixed;
- 	top: 10%; left: 15%;
- 	height: 90%; width: 85%;
+ 	top: 10%; left: 8%;
+ 	height: 90%; width: 92%;
  	background:
 
  }
