@@ -105,6 +105,15 @@ object {
 	padding-bottom: 30px;
 }
 
+.modal-text > p{
+	font-size: 2em;
+}
+
+.modal-text > h4 {
+	font-size: 2.5em;
+}
+
+
 
 h1{
 	font-family: "Times New Roman";
