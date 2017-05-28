@@ -20,10 +20,11 @@
  }
 
  h1{
-	font-family: "Arial";
-	font-size: 3em;
-	font-weight: bold;
-}
+ 	font-family: "Arial";
+ 	font-size: 3em;
+ 	font-weight: bold;
+ }
+
 
 
 
@@ -87,7 +88,7 @@
  	color: #000;
  }
 
-/*Sidebar*/
+ /*Sidebar*/
  .sidebar {
  	position: fixed;
  	left: 0; top: 10%; bottom: 0;
@@ -108,7 +109,7 @@
  	background: #f39158;
  }
 
-/*main content frame*/
+ /*main content frame*/
  .main_content_frame {
  	position: fixed;
  	top: 10%; left: 8%;
@@ -122,7 +123,12 @@
  	background: #eee8dd;
  }
 
-/*art.html related CSS*/
+ .main_content > .container {
+ 	max-height: 100%;
+ 	width: 100%;
+ }
+
+ /*art.html related CSS*/
  .assignment-tables {
  	margin-top: 5%;
  	width: 80%;
@@ -141,31 +147,70 @@
  }
 
  .nav-tabs > li.active > a{
-	color: #f08242;
+ 	color: #f08242;
  	background: #595959;
  }
 
  .nav-tabs > li.active > a:hover {
+ 	color: #f4a171;
+ 	background: #999999;
+ }
+
+ .nav-tabs > li.active > a:focus {
  	color: #f08242;
  	background: #595959;
  }
 
-  .nav-tabs > li.active > a:focus {
- 	color: #f08242;
- 	background: #595959;
- }
-
-  .nav-tabs > li > a:hover {
- 	color: #f08242;
- 	background: #595959;
+ .nav-tabs > li > a:hover {
+ 	color: #f4a171;
+ 	background: #999999;
  }
 
  .nav > li > a {
  	color: #000;
  }
 
+ .navbar-text {
+ 	margin-top: 5px;
+ 	margin-bottom: 5px;
+ }
+
+ .navbar-text > h2 {
+ 	margin-top: 5px;
+ 	margin-bottom: 5px;
+ 	font-size: 2em;
+ 	font: "Arial";
+ 	font-weight: bolder;
+ }
+
+ .navbar-fixed-bottom {
+ 	background: #AAA;
+ 	height: 5%;
+ }
+
  .back-button-container{
- 	padding-bottom: 10px;
+ 	padding-bottom: 0px;
+ }
+
+ .btn-default {
+ 	color: #f08242;
+ 	background:  #666666;
+ }
+
+
+ .btn-default:hover {
+ 	color: #f08242;
+ 	background: #808080;
+ }
+
+ .save-submit-group > .btn {
+ 	color: #f08242;
+ 	background: #666666;
+ }
+
+ .save-submit-group > .btn:hover {
+ 	color: #f08242;
+ 	background: #808080;
  }
 
  .table-hover > tbody > tr {
@@ -185,7 +230,7 @@
  }
 
 
-/*Modals*/
+ /*Modals*/
 
  /*modal text contents*/
  .modal-text > p{
@@ -202,67 +247,74 @@
  	width: 100%;
  }
 
-.main_content > .container {
-	max-height: 100%;
-	width: 100%;
-}
 
-.questions-column {
-	height: 90%; 
-\	overflow-y: scroll;
-}
+ /*assignment and peer review screens*/
+ .questions-column {
+ 	height: 90%; 
+ 	overflow-y: scroll;
+ }
 
-.questions-form {
-	height: 100%;
-	padding-top: 10px;
-	padding-left: 5px; padding-right: 5px;
-}
+ .questions-form {
+ 	height: 100%;
+ 	padding-top: 10px;
+ 	padding-left: 5px; padding-right: 5px;
+ }
 
-.save-submit-group {
-	height: 100%;
-	padding: 5px;
-	float: right;
-}
+ .questions-form > .form-group > label {
+ 	font: "Arial";
+ 	font-size: 1.4em;
+ }
 
-.peer-review-image > img {
-	width: 70%;
-	height: 30%;
-	padding-bottom: 20px;
-}
+ .form-control {
+ 	background: #e5ddcc;
+ 	font: "Arial";
+ 	font-size: 1.3em;
+ }
 
-.peer-review-ownwork {
-	overflow-y: scroll;
+ .save-submit-group {
+ 	height: 100%;
+ 	padding: 5px;
+ 	float: right;
+ }
 
-}
+ .peer-review-image > img {
+ 	width: 70%;
+ 	height: 30%;
+ 	padding-bottom: 20px;
+ }
 
-.peer-review-ownwork > p {
-	width: 80%;
-	margin-left: auto; margin-right: auto;
-}
+ .peer-review-ownwork {
+ 	overflow-y: scroll;
+
+ }
+
+ .peer-review-ownwork > p {
+ 	width: 80%;
+ 	margin-left: auto; margin-right: auto;
+ }
 
 
+ /*toast/snackbar related*/
 
-/* The snackbar - position it at the bottom and in the middle of the screen */
-#save_toast {
-	visibility: hidden; /* Hidden by default. Visible on click */
-	min-width: 250px; /* Set a default minimum width */
-	margin-left: -125px; /* Divide value of min-width by 2 */
-	background-color: #333; /* Black background color */
-	color: #fff; /* White text color */
-	text-align: center; /* Centered text */
-	border-radius: 2px; /* Rounded borders */
-	padding: 16px; /* Padding */
-	position: fixed; /* Sit on top of the screen */
-	z-index: 1; /* Add a z-index if needed */
-	left: 50%; /* Center the snackbar */
-	bottom: 50%; /* 30px from the bottom */
-}
+ /* The snackbar - position it at the bottom and in the middle of the screen */
+ #save_toast {
+ 	visibility: hidden; /* Hidden by default. Visible on click */
+ 	min-width: 250px; /* Set a default minimum width */
+ 	margin-left: -125px; /* Divide value of min-width by 2 */
+ 	background-color: #333; /* Black background color */
+ 	color: #fff; /* White text color */
+ 	text-align: center; /* Centered text */
+ 	border-radius: 2px; /* Rounded borders */
+ 	padding: 16px; /* Padding */
+ 	position: fixed; /* Sit on top of the screen */
+ 	z-index: 1; /* Add a z-index if needed */
+ 	left: 50%; /* Center the snackbar */
+ 	bottom: 50%; /* 30px from the bottom */
+ }
 
-/*CSS related to toast example from W3schools*/
-
-/* Show the snackbar when clicking on a button (class added with JavaScript) */
-#save_toast.show {
-	visibility: visible; /* Show the snackbar */
+ /* Show the snackbar when clicking on a button (class added with JavaScript) */
+ #save_toast.show {
+ 	visibility: visible; /* Show the snackbar */
 
 /* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
 However, delay the fade out process for 2.5 seconds */
